@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Graduación | Invitación</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* FOTOGRAFÍA DE FONDO */
+
+        .fondo {
+            position: fixed;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("https://images.openai.com/static-rsc-4/8cvkrdD03rdPCK4sxw322ORGDGHTijJDdCgmhvxdDxQ-1abFgNXhsInMHaeGjWH6VwEf80W4bzYvr9oy6_T-PeD2JTXNfmSoBpy-h760zXCcxkMgrabgU3cvYny4S0NN6FnUgcoYDDEVP60iH9SziijstfRVgfFWW098ZmOHcyMmrtd94D5_R2viTLY7Yoxm?purpose=fullsize");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            z-index: -2;
+        }
+
+        /* DESTELLOS */
+
+        .destellos {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+
+            background-image:
+                radial-gradient(
+                    circle,
+                    rgba(218, 183, 95, 0.18) 1px,
+                    transparent 2px
+                );
+
+            background-size: 80px 80px;
+            animation: movimiento 18s linear infinite;
+        }
+
+        /* CONTENIDO */
+
+        .invitacion {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .contenido {
+            max-width: 800px;
+            animation: subir 1.8s ease forwards;
+        }
+
+        .linea {
+            width: 90px;
+            height: 1px;
+            background: #D4AF37;
+            margin: 25px auto;
+        }
+
+        .encabezado {
+            color: #D4AF37;
+            letter-spacing: 5px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(55px, 9vw, 100px);
+            font-weight: 500;
+            color: #E6C76A;
+            line-height: 1;
+            margin: 20px 0;
+        }
+
+        .subtitulo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .mensaje {
+            font-size: 15px;
+            line-height: 2;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .fecha {
+            color: #E6C76A;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            letter-spacing: 3px;
+        }
+
+        .detalles {
+            font-size: 14px;
+            line-height: 2.2;
+            font-weight: 300;
+        }
+
+        .final {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: #E6C76A;
+            font-style: italic;
+            margin-top: 25px;
+        }
+
+        /* ANIMACIONES */
+
+        @keyframes subir {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes movimiento {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 300px 300px;
+            }
+        }
+
+        /* CELULARES */
+
+        @media (max-width: 600px) {
+
+            .invitacion {
+                padding: 20px;
+            }
+
+            .encabezado {
+                letter-spacing: 3px;
+                font-size: 10px;
+            }
+
+            h1 {
+                font-size: 65px;
+            }
+
+            .subtitulo {
+                font-size: 25px;
+            }
+
+            .mensaje {
+                font-size: 13px;
+            }
+
+            .fecha {
+                font-size: 27px;
+            }
+
+            .detalles {
+                font-size: 13px;
+            }
+
+            .final {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="fondo"></div>
+    <div class="destellos"></div>
+
+    <main class="invitacion">
+
+        <div class="contenido">
+
+            <p class="encabezado">
+                ✦ UNA INVITACIÓN ESPECIAL ✦
+            </p>
+
+            <div class="linea"></div>
+
+            <h1>Mi Graduación</h1>
+
+            <p class="subtitulo">
+                2026
+            </p>
+
+            <div class="linea"></div>
+
+            <p class="mensaje">
+                Después de un camino lleno de esfuerzo,
+                aprendizajes y sueños, llega un momento
+                que merece ser celebrado.
+
+                <br><br>
+
+                Me encantaría que formaras parte de este
+                día tan especial y compartir contigo
+                la alegría de este logro.
+            </p>
+
+            <div class="linea"></div>
+
+            <p class="fecha">
+                27 DE NOVIEMBRE
+            </p>
+
+            <p class="detalles">
+                <strong>Hora:</strong> 5:30 PM<br>
+                <strong>Lugar:</strong> Casa de mis padres
+            </p>
+
+            <p class="final">
+                ¡Espero contar con tu presencia!
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
